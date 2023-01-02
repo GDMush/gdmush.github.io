@@ -40,19 +40,27 @@
       img:hover {
         opacity: 0.5; /* Set the opacity to 0.5 (half visible) when the image is hovered over */
       }
+      img:hover:before {
+        content: "\2764"; /* Unicode code for the black heart emoji */
+        color: black; /* Set the color of the emoji to black */
+        font-size: 30px; /* Set the size of the emoji to 30px */
+      }
+
     </style>
   </head>
   <body>
     <h1>Mouse Pouch</h1>
     <h2>Info</h2>
-    <div>
-      <p>Race: Dog</p>
-      <p>Sex: Girl</p>
-    </div>
-      <div class="center">
-        <img src="https://cdn.discordapp.com/avatars/198137180923756544/72eb5eda07cb29d018d64da25b1a00f8.png?size=1024" width="200" height="200">
-      <a href="https://steamcommunity.com/id/Wiskurs/">
-        <img src="/resources/STEAM.png" alt="Steam Icon">
+    <div class="center">
+      <img src="https://cdn.discordapp.com/avatars/198137180923756544/72eb5eda07cb29d018d64da25b1a00f8.png?size=1024" width="200" height="200">
+      <div>
+        <p>Race: Dog</p>
+        <p>Sex: Girl</p>
+        <a href="https://steamcommunity.com/id/Wiskurs/">
+          <img src="/resources/STEAM.png" alt="Steam Icon">
+        </a>
+      </div>
+    </div>    
       </a>
     </div>
   </body>
