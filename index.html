@@ -29,7 +29,7 @@
         width: 70%
       }
       b {
-        color: rgb(122, 122, 122);
+        color: rgb(255, 255, 255);
         font-size: 13px;
       }
       .center {
@@ -39,9 +39,23 @@
         border-radius: 10px;
         opacity: 1; /* Set the initial opacity to 1 (fully visible) */
         transition: opacity 0.5s; /* Add a transition effect for the opacity change */
+        position: relative;
       }
       img:hover {
         opacity: 0.5; /* Set the opacity to 0.5 (half visible) when the image is hovered over */
+      }
+      img::before {
+        content: "\2665"; /* This specifies the content to be inserted (a black heart emoji) */
+        position: absolute; /* This positions the pseudo-element absolutely */
+        top: 0; /* This positions the pseudo-element at the top of the image */
+        left: 0; /* This positions the pseudo-element at the left of the image */
+        font-size: 40px; /* This sets the font size of the pseudo-element */
+        color: black; /* This sets the color of the pseudo-element */
+        opacity: 0; /* This sets the initial opacity of the pseudo-element to 0 (invisible) */
+        transition: opacity 0.5s; /* Add a transition effect for the opacity change */
+      }
+      img:hover::before {
+        opacity: 1; /* On hover, set the pseudo-element's opacity to 1 (fully visible) */
       }
       a {
         width: 16px
