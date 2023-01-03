@@ -45,18 +45,18 @@
       img:hover {
         opacity: 0.5; /* Set the opacity to 0.5 (half visible) when the image is hovered over */
       }
-      img::before {
-        content: "\2665"; /* This specifies the content to be inserted (a black heart emoji) */
-        position: absolute; /* This positions the pseudo-element absolutely */
-        top: 0; /* This positions the pseudo-element at the top of the image */
-        left: 0; /* This positions the pseudo-element at the left of the image */
-        font-size: 40px; /* This sets the font size of the pseudo-element */
-        color: black; /* This sets the color of the pseudo-element */
-        opacity: 0; /* This sets the initial opacity of the pseudo-element to 0 (invisible) */
-        transition: opacity 0.5s; /* Add a transition effect for the opacity change */
+      .fart {
+        /* Set the initial position of the element to be off the right side of the screen */
+        position: absolute;
+        right: -100px;
+        /* Animate the element by moving it from right to left over 1 second */
+        animation: slideIn 1s;
       }
-      img:hover::before {
-        opacity: 1; /* On hover, set the pseudo-element's opacity to 1 (fully visible) */
+
+      /* Add a keyframe animation to move the element from right to left */
+      @keyframes slideIn {
+        from { right: -100px; }
+        to { right: 50%; }
       }
       a {
         width: 16px
@@ -72,6 +72,10 @@
         <p>Race: Dog</p>
         <p>Sex: Girl</p>
         <img src="https://cdn.discordapp.com/avatars/198137180923756544/72eb5eda07cb29d018d64da25b1a00f8.png?size=1024" width="200" height="200">
+        <img src="https://example.com/image.png" onclick="document.getElementById('fart').classList.add('fart')">
+
+        <!-- Add a "fart" element with an id so it can be selected by the onclick event -->
+        <div id="fart">fart</div>
     </div>
       <a href="https://steamcommunity.com/id/Wiskurs/">
         <img src="/resources/STEAM.png" height="32" alt="Steam Icon">
