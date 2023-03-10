@@ -1,90 +1,23 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Mouse Pouch</title>
-    <style>
-      body {
-        background: #DB6551; /* This sets the background color to black */
-        box-shadow: 0 0 0 4000px rgba(255, 255, 255, 0.8);
-        font-family: 'gg-sans', Courier, monospace, consolas, monospace;
-      }
-      div {
-        /* outline: 2px solid #00BFFF; */
-        padding: 10px;
-        margin: 5px;
-        color: white;
-        font-size: 20px;
-      }
-      h1 {
-        padding: 10px;
-        text-align: center;
-        background: linear-gradient(45deg, #ffffff 30%, #f886dc 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-      }
-      h2 {
-        color: white;
-        text-align: center;
-      }
-      hr {
-        width: 70%
-      }
-      b {
-        color: rgb(255, 255, 255);
-        font-size: 13px;
-      }
-      .center {
-        text-align: center;
-      }
-      img {
-        border-radius: 10px;
-        opacity: 1; /* Set the initial opacity to 1 (fully visible) */
-        transition: opacity 0.5s; /* Add a transition effect for the opacity change */
-        position: relative;
-      }
-      img:hover {
-        opacity: 0.5; /* Set the opacity to 0.5 (half visible) when the image is hovered over */
-      }
-      .fart {
-        /* Set the initial position of the element to be off the right side of the screen */
-        position: absolute;
-        right: -100px;
-        /* Animate the element by moving it from right to left over 1 second */
-        animation: slideIn 1s;
-      }
-
-      /* Add a keyframe animation to move the element from right to left */
-      @keyframes slideIn {
-        from { right: -100px; }
-        to { right: 50%; }
-      }
-      a {
-        width: 16px
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Mouse Pouch</h1>
-    <h2>Info</h2>
-    <hr>
-    <div class="center">
-      <div>
-        <p>Race: Dog</p>
-        <p>Sex: Girl</p>
-        <img src="https://cdn.discordapp.com/avatars/198137180923756544/72eb5eda07cb29d018d64da25b1a00f8.png?size=1024" width="200" height="200">
-        <img src="https://example.com/image.png" onclick="document.getElementById('fart').classList.add('fart')">
-
-        <!-- Add a "fart" element with an id so it can be selected by the onclick event -->
-        <div id="fart">fart</div>
-    </div>
-      <a href="https://steamcommunity.com/id/Wiskurs/">
-        <img src="/resources/STEAM.png" height="32" alt="Steam Icon">
-      </a>
-      <a href="https://www.youtube.com/channel/UCCXgWghtjWueOLnCnRPPwyA">
-        <img src="/resources/youtube.png" height="32" alt="Youtube Icon">
-      </a>
-      <b>
-        <p>Wiskurs#3416</p>
-      </b>
-  </body>
+<head>
+	<title>Mouse Pouch - About Me</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+	<section class="hero is-info is-fullheight">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">Hi, I'm Mouse Pouch</h1>
+				<h2 class="subtitle">A web developer from somewhere in the world</h2>
+				<p>
+					I enjoy creating beautiful and functional websites using the latest technologies. 
+					When I'm not coding, you can find me exploring new places, reading books, or playing video games.
+				</p>
+			</div>
+		</div>
+	</section>
+</body>
 </html>
