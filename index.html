@@ -45,37 +45,24 @@
 			text-decoration: none;
 		}
 
+		#background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-size: cover;
+			background-position: center;
+			transition: background-image 0.5s ease-in-out;
+		}
+
+
 		figure.image {
 		  outline: 5px solid #fff;
 		  outline-offset: -5px;
 		}
-
-		body {
-  			background-color: #209cee;
-		}
-		body.red {
-			background-color: #ff3860;
-		}
-
-
 	</style>
-	<script>
-		// When the user scrolls, update the background color
-		document.addEventListener("scroll", function () {
-		  // Get the current position of the scrollbar as a percentage
-		  var scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-	  
-		  // Use the percentage to lerp between the two colors
-		  var red = Math.round(33 + (222 - 33) * scrollPosition);
-		  var green = Math.round(156 + (56 - 156) * scrollPosition);
-		  var blue = Math.round(238 + (96 - 238) * scrollPosition);
-		  var color = "rgb(" + red + ", " + green + ", " + blue + ")";
-	  
-		  // Update the background color
-		  document.body.style.backgroundColor = color;
-		});
-	  </script>
-	  
 </head>
 <body>
 	<section class="hero is-info is-fullheight">
@@ -107,6 +94,20 @@
 			</div>
 		</div>
 	</section>
+	<script>
+			function changeBackground() {
+	  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	  const windowHeight = window.innerHeight;
+	  const totalHeight = document.documentElement.offsetHeight;
+	  const ratio = scrollTop / (totalHeight - windowHeight);
+	  const index = Math.floor(ratio * backgrounds.length);
+	  const background = backgrounds[index];
+	  document.getElementById('background').style.backgroundImage = `url(${background})`;
+	}
+
+	window.addEventListener('scroll', changeBackground);
+</script>
+
 </body>
 </html>
 
