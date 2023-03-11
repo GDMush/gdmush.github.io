@@ -9,7 +9,7 @@
 	<meta property="og:title" content="Mouse Pouch">
 	<meta property="og:description" content="I make maps.">
 	<meta property="og:image" content="https://cdn.discordapp.com/avatars/198137180923756544/a_05c6949a4973fd242dd5641c0eb804fe.gif?size=1024">
-	<meta property="og:url" content="https://example.com">
+	<meta property="og:url" content="https://mouseypouch.com/">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
 	<style>
@@ -43,18 +43,6 @@
 		p a[href="#"] {
 			color: red;
 			text-decoration: none;
-		}
-
-		#background {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: -1;
-			background-size: cover;
-			background-position: center;
-			transition: background-image 0.5s ease-in-out;
 		}
 
 
@@ -94,20 +82,6 @@
 			</div>
 		</div>
 	</section>
-	<script>
-			function changeBackground() {
-	  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	  const windowHeight = window.innerHeight;
-	  const totalHeight = document.documentElement.offsetHeight;
-	  const ratio = scrollTop / (totalHeight - windowHeight);
-	  const index = Math.floor(ratio * backgrounds.length);
-	  const background = backgrounds[index];
-	  document.getElementById('background').style.backgroundImage = `url(${background})`;
-	}
-
-	window.addEventListener('scroll', changeBackground);
-</script>
-
 </body>
 </html>
 
