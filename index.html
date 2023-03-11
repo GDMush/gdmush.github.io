@@ -51,10 +51,31 @@
 		}
 
 		body {
-		  background-image: none;
-		  filter: none;
+  			background-color: #209cee;
 		}
+		body.red {
+			background-color: #ff3860;
+		}
+
+
 	</style>
+	<script>
+		// When the user scrolls, update the background color
+		document.addEventListener("scroll", function () {
+		  // Get the current position of the scrollbar as a percentage
+		  var scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+	  
+		  // Use the percentage to lerp between the two colors
+		  var red = Math.round(33 + (222 - 33) * scrollPosition);
+		  var green = Math.round(156 + (56 - 156) * scrollPosition);
+		  var blue = Math.round(238 + (96 - 238) * scrollPosition);
+		  var color = "rgb(" + red + ", " + green + ", " + blue + ")";
+	  
+		  // Update the background color
+		  document.body.style.backgroundColor = color;
+		});
+	  </script>
+	  
 </head>
 <body>
 	<section class="hero is-info is-fullheight">
