@@ -5,40 +5,43 @@
   <style>
     .battlepass {
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Fill the full height of the viewport */
       background-color: #232323;
-      color: white;
+    }
+
+    .scroll-container {
+      overflow-x: auto; /* Allow horizontal scrolling */
+      white-space: nowrap; /* Keep all the levels in a single line */
+      padding: 20px;
+      text-align: center;
     }
 
     .level {
+      display: inline-block; /* Line up the levels horizontally */
       border: 1px solid #ffffff;
       padding: 20px;
       margin: 20px;
       text-align: center;
       border-radius: 15px;
+      color: white;
     }
 
     .level h2 {
       margin-bottom: 10px;
     }
+
   </style>
 </head>
 <body>
   <div class="battlepass">
-    <div class="level">
-      <h2>Level 1</h2>
-      <p>Reward: 100 Coins</p>
+    <div class="scroll-container">
+      <div class="level"><h2>Level 1</h2><p>Reward: 100 Coins</p></div>
+      <div class="level"><h2>Level 2</h2><p>Reward: 200 Coins</p></div>
+      <!-- Repeat for as many levels as you need -->
+      <div class="level"><h2>Level 25</h2><p>Reward: Exclusive Skin</p></div>
     </div>
-    <div class="level">
-      <h2>Level 2</h2>
-      <p>Reward: 200 Coins</p>
-    </div>
-    <div class="level">
-      <h2>Level 3</h2>
-      <p>Reward: Exclusive Skin</p>
-    </div>
-  </div>
+  </div>  
 </body>
 </html>
