@@ -1,4 +1,4 @@
-document.getElementById('scroll-left').onmouseenter = function () {
+document.getElementById('scroll-left').onclick = function () {
     document.getElementById('scroll-container').scrollBy({
       top: 0,
       left: -document.querySelector('.level').offsetWidth,
@@ -6,7 +6,7 @@ document.getElementById('scroll-left').onmouseenter = function () {
     });
   };
   
-  document.getElementById('scroll-right').onmouseenter = function () {
+  document.getElementById('scroll-right').onclick = function () {
     document.getElementById('scroll-container').scrollBy({
       top: 0,
       left: document.querySelector('.level').offsetWidth,
