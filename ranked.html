@@ -5,45 +5,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     .battlepass {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #232323;
-      font-family: 'Nunito', sans-serif;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #232323;
+}
 
-    .scroll-container {
-      overflow-x: auto;
-      white-space: nowrap;
-      padding: 20px;
-      text-align: center;
-    }
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  text-align: center;
+}
 
-    .level {
-      display: inline-block;
-      border: 6px solid #ffffff;
-      padding: 20px;
-      margin: 20px;
-      text-align: center;
-      border-radius: 15px;
-      color: white;
-    }
+.level {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+}
 
-    .level h2 {
-      margin-bottom: 10px;
-    }
+.scroll-button {
+  color: white;
+  background-color: #232323;
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin: 20px;
+}
+
 
 
   </style>
 </head>
 <body>
+  <script src="battlepass.js"></script>
   <div class="battlepass">
-    <div class="scroll-container">
+    <button id="scroll-left" class="scroll-button">Left</button>
+    <div id="scroll-container" class="scroll-container">
       <div class="level"><h2>Level 1</h2><p>Reward: 100 Coins</p></div>
       <div class="level"><h2>Level 2</h2><p>Reward: 200 Coins</p></div>
       <!-- Repeat for as many levels as you need -->
       <div class="level"><h2>Level 25</h2><p>Reward: Exclusive Skin</p></div>
+    </div>
+      <button id="scroll-right" class="scroll-button">Right</button>
     </div>
   </div>  
 </body>
