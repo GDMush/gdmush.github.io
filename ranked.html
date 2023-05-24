@@ -14,14 +14,18 @@
 }
 
 .scroll-container {
-  overflow-x: auto;
-  white-space: nowrap;
+  display: flex;
+  overflow: hidden;
   padding: 20px;
-  text-align: center;
+  width: calc(100% - 120px);  /* Adjust width so that it fits 3 levels and buttons */
 }
 
+
 .level {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(33.3333% - 40px);  /* Divide by 3 and subtract margins */
   border: 7px solid #ffffff;
   padding: 20px;
   margin: 20px;
@@ -29,6 +33,7 @@
   border-radius: 15px;
   color: white;
 }
+
 
 .scroll-button {
   color: white;
@@ -46,7 +51,6 @@
   </style>
 </head>
 <body>
-  <script src="battlepass.js"></script>
   <div class="battlepass">
     <button id="scroll-left" class="scroll-button">L</button>
     <div id="scroll-container" class="scroll-container">
@@ -61,5 +65,6 @@
       <button id="scroll-right" class="scroll-button">R</button>
     </div>
   </div>  
+  <script src="battlepass.js"></script>
 </body>
 </html>

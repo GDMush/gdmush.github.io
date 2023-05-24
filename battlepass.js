@@ -1,16 +1,16 @@
-document.getElementById('scroll-left').addEventListener('click', function() {
+document.getElementById('scroll-left').onclick = function () {
     document.getElementById('scroll-container').scrollBy({
       top: 0,
-      left: -200, // Change this to control the scroll distance
-      behavior: 'smooth' // Smooth scrolling
+      left: -document.querySelector('.level').offsetWidth,
+      behavior: 'smooth'
     });
-  });
+  };
   
-  document.getElementById('scroll-right').addEventListener('click', function() {
+  document.getElementById('scroll-right').onclick = function () {
     document.getElementById('scroll-container').scrollBy({
       top: 0,
-      left: 200, // Change this to control the scroll distance
-      behavior: 'smooth' // Smooth scrolling
+      left: document.querySelector('.level').offsetWidth,
+      behavior: 'smooth'
     });
-  });
+  };
   
