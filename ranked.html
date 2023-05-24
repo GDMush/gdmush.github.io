@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Battle Pass UI</title>
   <style>
-    body {
+    .battlepass {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 20px;
+      background-color: #232323;
+      color: white;
     }
-    button {
-      cursor: pointer;
+
+    .level {
+      border: 1px solid #ffffff;
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      border-radius: 15px;
+    }
+
+    .level h2 {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <button>Join Queue</button>
+  <div class="battlepass">
+    <div class="level">
+      <h2>Level 1</h2>
+      <p>Reward: 100 Coins</p>
+    </div>
+    <div class="level">
+      <h2>Level 2</h2>
+      <p>Reward: 200 Coins</p>
+    </div>
+    <div class="level">
+      <h2>Level 3</h2>
+      <p>Reward: Exclusive Skin</p>
+    </div>
+  </div>
 </body>
 </html>
