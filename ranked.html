@@ -27,6 +27,12 @@
   width: calc(100% - 20px);  /* Adjust width so that it fits 3 levels and buttons */
 }
 
+.scroll-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .level {
   display: flex;
@@ -68,6 +74,7 @@
 <body>
   <div class="battlepass">
     <h1 class="title">Jailbreak Battle Pass</h1> 
+    <div class="scroll-wrapper">
     <button id="scroll-left" class="scroll-button">L</button>
     <div id="scroll-container" class="scroll-container">
       <div class="level"><h2>Level 1</h2><p>Reward: 100 Coins</p></div>
@@ -87,6 +94,7 @@
       <div class="level"><h2>Level 5</h2><p>Reward: 200 Coins</p></div>
       <!-- Repeat for as many levels as you need -->
       <div class="level"><h2>Level 25</h2><p>Reward: Exclusive Skin</p></div>
+    </div>
     </div>
       <button id="scroll-right" class="scroll-button">R</button>
     </div>
