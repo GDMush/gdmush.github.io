@@ -6,6 +6,7 @@
   <style>
     .battlepass {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -15,47 +16,35 @@
 
 .title {
   color: white;
-  align-items: center;
   font-size: 4em;
-  margin-bottom: 100px; 
   text-align: center;  /* Centers the title */
 }
 
 .scroll-container {
   display: flex;
-  overflow: hidden;
-  padding: 40px;
-  width: calc(100% - 20px);  /* Adjust width so that it fits 3 levels and buttons */
-}
-
-.scroll-wrapper {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  padding: 40px;
+  width: 100%;  /* Full width */
 }
 
 .level {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(33.3333% - 40px);  /* Divide by 3 and subtract margins */
+  width: calc(33.3333% - 40px);
   border: 7px solid #ffffff;
   padding: 20px;
   margin: 35px;
   text-align: center;
   border-radius: 25px;
   color: white;
-  transition: all 0.3s ease-in-out;  /* Animate the transformations */
+  transition: all 0.3s ease-in-out;
 }
 
-/* Add hover effects */
 .level:hover {
-  border-color: orange;  /* Change border color to orange */
-  transform: scale(1.1);  /* Increase size */
+  border-color: orange;
+  transform: scale(1.1);
 }
-
-
 
 .scroll-button {
   color: white;
@@ -68,36 +57,24 @@
   margin: 20px;
 }
 
-
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
   </style>
 </head>
 <body>
   <div class="battlepass">
-    <h1 class="title">Jailbreak Battle Pass</h1> 
-    <div class="scroll-wrapper">
-    <button id="scroll-left" class="scroll-button">L</button>
-    <div id="scroll-container" class="scroll-container">
-      <div class="level"><h2>Level 1</h2><p>Reward: 100 Coins</p></div>
-      <div class="level"><h2>Level 2</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 3</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 4</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 5</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 1</h2><p>Reward: 100 Coins</p></div>
-      <div class="level"><h2>Level 2</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 3</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 4</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 5</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 1</h2><p>Reward: 100 Coins</p></div>
-      <div class="level"><h2>Level 2</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 3</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 4</h2><p>Reward: 200 Coins</p></div>
-      <div class="level"><h2>Level 5</h2><p>Reward: 200 Coins</p></div>
-      <!-- Repeat for as many levels as you need -->
-      <div class="level"><h2>Level 25</h2><p>Reward: Exclusive Skin</p></div>
-    </div>
-    </div>
-      <button id="scroll-right" class="scroll-button">R</button>
+    <div class="title"><h1>Jailbreak Battle Pass</h1></div> 
+    <div class="buttons">
+        <button id="scroll-left" class="scroll-button">L</button>
+        <div id="scroll-container" class="scroll-container">
+          <!-- Rest of your levels -->
+        </div>
+        <button id="scroll-right" class="scroll-button">R</button>
     </div>
   </div>  
   <script src="battlepass.js"></script>
