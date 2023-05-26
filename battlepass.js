@@ -1,29 +1,29 @@
-let scrollInterval;
+// Get all levels into an array
+let levels = Array.from(document.getElementsByClassName('level'));
+let currentDisplayIndex = 0;
 
-document.getElementById('scroll-left').onmouseenter = function () {
-  scrollInterval = setInterval(function () {
-    document.getElementById('scroll-container').scrollBy({
-      top: 0,
-      left: -200,  // Adjust speed by changing this value
-      behavior: 'smooth'
-    });
-  }, 25);  // Adjust speed by changing this value
-};
+// Hide all levels initially
+levels.forEach(level => level.style.display = 'none');
 
-document.getElementById('scroll-left').onmouseleave = function () {
-  clearInterval(scrollInterval);
-};
+// Show initial three levels
+for(let i = 0; i < 3; i++) {
+    levels[i].style.display = 'flex';
+}
 
-document.getElementById('scroll-right').onmouseenter = function () {
-  scrollInterval = setInterval(function () {
-    document.getElementById('scroll-container').scrollBy({
-      top: 0,
-      left: 200,  // Adjust speed by changing this value
-      behavior: 'smooth'
-    });
-  }, 25);  // Adjust speed by changing this value
-};
+// Scroll left function
+document.getElementById('scroll-left').addEventListener('click', function() {
+    if(currentDisplayIndex > 0) {
+        levels[currentDisplayIndex + 2].style.display = 'none';
+        currentDisplayIndex--;
+        levels[currentDisplayIndex].style.display = 'flex';
+    }
+});
 
-document.getElementById('scroll-right').onmouseleave = function () {
-  clearInterval(scrollInterval);
-};
+// Scroll right function
+document.getElementById('scroll-right').addEventListener('click', function() {
+    if(currentDisplayIndex < levels.length - 3) {
+        levels[currentDisplayIndex].style.display = 'none';
+        currentDisplayIndex++;
+        levels[currentDisplayIndex + 2].style.display = 'flex';
+    }
+});
