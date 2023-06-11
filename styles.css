@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI","Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.header {
+    background-color:#3e8ed0;
+    padding: 50px;
+    color:white;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map {
+  background-color:#ffffff;
+    padding-left: 10px;
+    padding-top: 10px;
+    float: right;
+    padding-right: 10px;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    text-decoration: none;
+}
+
+.map:hover {
+  animation-name: myanimation;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes myanimation {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(1.15);
+  }
+}
+
+a img {
+    width: 320px;
+    height: 180px;
+}
+
+.avatar-image {
+  width: 60%;
+  border: 5px solid white;
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 0.5;
+  font-weight: 600;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 2rem;
+  line-height: 0.5;
+  font-weight: 400;
+  text-align: center;
+}
+
+.map-title {
+  background-color: #3e8ed0;
+  text-align: center;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  text-decoration: none;
+}
+
+.map-spacer {
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+}
+
+.incomplete {
+  color: red;
+}
+
+.spacer {
+  padding-top: 25px;
+}
+
+.map-content {
+  position: relative;
+}
+
+video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
